@@ -158,3 +158,22 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+# Create a virtualenv named ``skimage-dev`` that lives outside of the repository.
+# One common convention is to place it inside an ``envs`` directory under your home directory:
+mkdir ~/envs
+python -m venv ~/envs/skimage-dev
+# Activate it
+# (On Windows, please use ``skimage-dev\Scripts\activate``)
+source ~/envs/skimage-dev/bin/activate
+# Install main development and runtime dependencies
+pip install -r requirements.txt
+# Install build dependencies of scikit-image
+pip install -r requirements/build.txt
+# Build scikit-image from source
+spin build
+# Test your installation
+spin test
+# Build docs
+spin docs
+# Try the new version in IPython
+spin ipython
