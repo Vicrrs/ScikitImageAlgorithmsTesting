@@ -177,3 +177,5 @@ spin test
 spin docs
 # Try the new version in IPython
 spin ipython
+# imagens
+/imgs
